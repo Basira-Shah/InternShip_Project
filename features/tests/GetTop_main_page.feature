@@ -1,6 +1,6 @@
 # Created by ahmadshah at 7/11/22
 Feature: Tests for GetTop logo
-
+# Code for TMTN-125
   Scenario: Verify that GetTop logo is clickable and takes to the home page
     Given Open GetTop page
     When click the logo sign

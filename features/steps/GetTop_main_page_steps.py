@@ -12,7 +12,7 @@ def open_GetTop(context):
     # context.driver.get('https://gettop.us/')
     context.app.main_page.open_GetTop()
 
-
+# Code for TMTN-125
 @when('click the logo sign')
 def click_logo(context):
     # context.driver.find_element(*LOGO).click()
@@ -28,7 +28,7 @@ def hover_access(context):
 def click_cases_protection(context):
     context.app.header.click_cases_protection()
 
-
+# Code for TMTN-125
 @then('verify GetTop logo is clickable and takes to the home page')
 def clickable_logo(context):
     # context.driver.wait.until(EC.url_contains('https://gettop.us/'))
