@@ -6,6 +6,7 @@ Feature: Tests for GetTop logo
     When click the logo sign
     Then verify GetTop logo is clickable and takes to the home page
 
+  # Code for TMTN-194
   Scenario: Verify that the page gives a 404 error message
     Given Open GetTop page
     When Hover over Accessories

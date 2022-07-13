@@ -18,12 +18,12 @@ def click_logo(context):
     # context.driver.find_element(*LOGO).click()
     context.app.header.click_logo()
 
-
+# For TMTN-194
 @when('Hover over Accessories')
 def hover_access(context):
     context.app.header.hover_access()
 
-
+# For TMTN-194
 @when('Click on Cases & Protection from the drop-down menu')
 def click_cases_protection(context):
     context.app.header.click_cases_protection()
