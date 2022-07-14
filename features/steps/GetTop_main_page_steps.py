@@ -28,11 +28,28 @@ def hover_access(context):
 def click_cases_protection(context):
     context.app.header.click_cases_protection()
 
+# For TMNT-195
+@when('Hover over iPhone')
+def hover_iphone(context):
+    context.app.header.hover_iphone()
+
+# For TMNT-195
+@when('Click on iPhone 12 option from the drop-down menu')
+def click_iphone12(context):
+    context.app.header.click_iphone12()
+
+
 # Code for TMTN-125
 @then('verify GetTop logo is clickable and takes to the home page')
 def clickable_logo(context):
     # context.driver.wait.until(EC.url_contains('https://gettop.us/'))
     context.app.header.verify_url_contains_clickable_logo('https://gettop.us/')
+
+# Code for TMNT-195
+@then('Verify the iPhone 12 option is un clickable')
+def un_clickable_iphone(context):
+    context.app.header.un_clickable_iphone()
+
 
 
 

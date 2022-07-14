@@ -12,3 +12,10 @@ Feature: Tests for GetTop logo
     When Hover over Accessories
     And Click on Cases & Protection from the drop-down menu
     Then Verify the product page is appear with 404 error message
+
+  # Code for TMTN-195
+  Scenario: iPhone 12 option is un clickable from the drop-down menu under iPhone
+    Given Open GetTop page
+    When Hover over iPhone
+    And Click on iPhone 12 option from the drop-down menu
+    Then Verify the iPhone 12 option is un clickable
