@@ -19,3 +19,10 @@ Feature: Tests for GetTop logo
     When Hover over iPhone
     And Click on iPhone 12 option from the drop-down menu
     Then Verify the iPhone 12 option is un clickable
+
+  # Code for TMTN-197
+  Scenario: Verify that the image of MacBook Pro 13-inch is present properly
+    Given Open GetTop page
+    When Hover over Mac
+    And Click on MacBook Pro 13-inch from the drop-down menu
+    Then Verify the image is showing properly

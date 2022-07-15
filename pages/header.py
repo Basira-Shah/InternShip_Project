@@ -11,6 +11,8 @@ class Header(Page):
     CASES_PROTECTION = (By.CSS_SELECTOR, "a[href='/cases']")
     IPHONE = (By.CSS_SELECTOR, "a.nav-top-link")
     IPHONE12 = (By.CSS_SELECTOR, "a[href='https://gettop.us/product-category/iphone/']")
+    MAC = (By.CSS_SELECTOR, "a[href='https://gettop.us/product-category/macbook/']")
+    MAC13 = (By.XPATH, "//a[@href='https://gettop.us/product/macbook-pro-13/']")
 
 
 
@@ -33,6 +35,12 @@ class Header(Page):
         actions.move_to_element(iphone)
         actions.perform()
 
+    def hover_mac(self):
+        actions = ActionChains(self.driver)
+        mac = self.find_element(*self.MAC)
+        actions.move_to_element(mac)
+        actions.perform()
+
     def click_cases_protection(self):
         self.click(*self.CASES_PROTECTION)
 
@@ -41,3 +49,6 @@ class Header(Page):
 
     def un_clickable_iphone(self):
         self.click(*self.IPHONE12)
+
+    def click_mac_13(self):
+        self.click(*self.MAC13)
