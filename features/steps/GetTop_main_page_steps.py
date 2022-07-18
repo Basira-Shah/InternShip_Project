@@ -61,6 +61,12 @@ def un_clickable_iphone(context):
     context.app.header.un_clickable_iphone()
 
 
+# Code for TMTN-244
+@then('Verify there are {expected_links} links')
+def verify_links(context, expected_links):
+    context.app.header.verify_links(expected_links)
+
+
 
 
 

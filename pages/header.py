@@ -13,6 +13,10 @@ class Header(Page):
     IPHONE12 = (By.CSS_SELECTOR, "a[href='https://gettop.us/product-category/iphone/']")
     MAC = (By.CSS_SELECTOR, "a[href='https://gettop.us/product-category/macbook/']")
     MAC13 = (By.XPATH, "//a[@href='https://gettop.us/product/macbook-pro-13/']")
+    TOP_LINKS = (By.XPATH, "//ul[@class='header-nav header-nav-main nav nav-left  nav-uppercase']")
+
+
+
 
 
 
@@ -52,3 +56,9 @@ class Header(Page):
 
     def click_mac_13(self):
         self.click(*self.MAC13)
+
+    def verify_links(self, expected_links):
+        time.sleep(3)
+        actual_links = self.driver.find_elements(*self.TOP_LINKS)
+        assert len(actual_links) == int(expected_links), \
+            f' Expected {expected_links} links, but got {len(actual_links)}'

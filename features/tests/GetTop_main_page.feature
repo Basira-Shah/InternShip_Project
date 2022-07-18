@@ -26,3 +26,8 @@ Feature: Tests for GetTop logo
     When Hover over Mac
     And Click on MacBook Pro 13-inch from the drop-down menu
     Then Verify the image is showing properly
+
+  # Code for TMTN-244
+  Scenario: Verify that the home page has 5 clickable sub links(MAC, iPHONE, iPAD, WATCH, ACCESSORIES)
+    Given Open GetTop page
+    Then Verify there are 5 links
