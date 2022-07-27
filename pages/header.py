@@ -15,11 +15,6 @@ class Header(Page):
     MAC13 = (By.XPATH, "//a[@href='https://gettop.us/product/macbook-pro-13/']")
     TOP_LINKS = (By.XPATH, "//ul[@class='header-nav header-nav-main nav nav-left  nav-uppercase']")
 
-
-
-
-
-
     def click_logo(self):
         time.sleep(2)
         self.click(*self.LOGO)
@@ -34,6 +29,7 @@ class Header(Page):
         actions.perform()
 
     def hover_iphone(self):
+        time.sleep(2)
         actions = ActionChains(self.driver)
         iphone = self.find_element(*self.IPHONE)
         actions.move_to_element(iphone)

@@ -1,6 +1,7 @@
 # Created by ahmadshah at 7/11/22
 Feature: Tests for GetTop logo
 # Code for TMTN-125
+  @smoke @positiveG
   Scenario: Verify that GetTop logo is clickable and takes to the home page
     Given Open GetTop page
     When click the logo sign
@@ -28,6 +29,7 @@ Feature: Tests for GetTop logo
     Then Verify the image is showing properly
 
   # Code for TMTN-244
+  @smoke
   Scenario: Verify that the home page has 5 clickable sub links(MAC, iPHONE, iPAD, WATCH, ACCESSORIES)
     Given Open GetTop page
     Then Verify there are 5 links
